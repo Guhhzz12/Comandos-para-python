@@ -1,0 +1,25 @@
+n = int(input())
+matriz = []
+principal = []
+secundaria = []
+cont = 0
+for c in range(n):
+    elemento = input()
+    elemento = elemento.replace(" ", "")
+    matriz.append(elemento)
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            principal.append(matriz[i][j])
+for i in range(n):
+    secundaria.append(matriz[i][n-i-1])
+for i in principal:
+    if i == 'X':
+        cont += 1
+for i in secundaria:
+    if i == 'X':
+        cont += 1
+if cont == 2*n:
+   print('O one piece eh real!')
+else:
+    print('Talvez o tesouro seja os amigos que fizemos no caminho')
