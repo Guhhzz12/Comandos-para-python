@@ -12,7 +12,7 @@ for i in range(n):
         if i == j:
             principal.append(matriz[i][j])
 for i in range(n):
-    secundaria.append(matriz[i][n-i-1])
+    secundaria.append(matriz[i][n-i-1])  #Diagonal secundária aqui
 for i in principal:
     if i == 'X':
         cont += 1
