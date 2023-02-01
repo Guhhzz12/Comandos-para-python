@@ -1,0 +1,13 @@
+#4 jogadores jogam um dado, guarda o resultado em um dicionário e no final coloque o dicionário em ordem.
+from random import randint
+dic = {}
+cont = 1
+for c in range(4):
+    nome = input('Digite o nome do jogador: ')
+    valor = randint(1, 6)
+    dic[nome] = valor
+    print('O/A {} tirou {} no dado!!'.format(nome, valor))
+print(dic)
+for item in sorted(dic, key = dic.get, reverse=True):
+        print('O {} ficou em {} pois tirou {} no dado!!'.format(item, cont, dic[item]))
+        cont += 1
